@@ -1,0 +1,22 @@
+var arr = [11, 1, 24, 6, 34, 56, 5, 3];
+
+function sort(a) {
+    var sorted = [a[0]];
+    var i, j;
+    
+    for (i = 1; i < a.length; i++) {
+        for (j = 0; j < sorted.length; j++) {
+            if (a[i] < sorted[j]) {
+                sorted.splice(j, 0, a[i]);
+                break;
+            } else if(j === sorted.length - 1) {
+                sorted.push(a[i]);
+                break;
+            }
+        }
+    }
+    
+    return sorted;
+}
+
+sort(arr);
