@@ -1,0 +1,25 @@
+function sieve(n) {
+    var primes = [];  // list of primes #'s
+    var crossed = []; // list of crossed out #'s
+    var i, j;         // counters
+    
+    // loop through numbers from 2 to n
+    for (i = 2; i <= n; i++) {
+        
+        // if the number is not crossed out...
+        if (crossed.indexOf(i) === -1) {
+            
+            // ...add it to the list of prime numbers
+            primes.push(i);
+            
+            // ...and cross out all the multiples of i
+            for (j = i*2; j <= n; j += i) {
+                crossed.push(j);
+            }
+        }
+    }
+    
+    return primes;
+}
+
+sieve(120);
