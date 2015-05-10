@@ -1,0 +1,5 @@
+function arrSwap(arr, index1, index2) {
+    var tmp = arr[index1];
+    arr[index1] = arr[index2];
+    arr[index2] = tmp;
+}
