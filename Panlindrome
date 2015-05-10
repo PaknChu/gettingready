@@ -1,0 +1,22 @@
+function Palindrome(str){
+    /* 1. if str length is odd return false
+       2. loop through num from the front and loop num from the back to match if they are matched
+        2a. if matched return true
+       3. else return false    
+    */
+    if (str.length % 2 === 1) {
+        return false;
+    }
+    
+    var i, j;
+    for (i = 0, j = str.length - 1;
+         j > 0 && i < str.length; i++, j--){
+             
+        if (str[i] !== str[j]){
+            return false;
+        }
+    }
+    return true;
+}
+
+Palindrome("amllma")
