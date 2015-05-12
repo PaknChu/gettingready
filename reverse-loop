@@ -1,0 +1,20 @@
+/* 1. create a function with one argument.
+   2. create variable i and a.
+   3. set var a = empty string "".
+   4. set loop - length - 1 starts the string at the end.
+      i will stop when is geater or equal to zero.
+      count backward.
+      5. each loop it will save the result to var a.
+    6. return a.   
+
+
+*/
+function reverse(str){
+    var i,a = "";
+    for (i = str.length-1; i >= 0; i--){
+       a += str[i]
+    }
+    return a
+}
+
+reverse("loa")
