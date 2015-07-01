@@ -1,0 +1,15 @@
+var s= [1,2,3,4], d = [], sp = [];
+
+function H(disk,source,dest,spare){
+    if (disk === 0){
+        dest.unshift(source.shift());
+        console.log(s, d, sp);
+    } else {
+        H(disk - 1,source ,spare ,dest);
+        dest.unshift(source.shift());
+        console.log(s,d,sp);
+        H(disk - 1, spare, dest, source);
+    }
+}
+
+H(3, s, d, sp);
