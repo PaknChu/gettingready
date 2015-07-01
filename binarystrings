@@ -1,0 +1,22 @@
+function binStrings(length){
+  if (length === 0){
+    return [""];
+  } 
+  var a1 = [], a2 = [],
+      answer = binStrings(length - 1), i;
+  for(i = 0; i < answer.length; i++ ){
+    var s = answer[i];
+    a1.push("0" + s);
+    a2.push("1" + s);
+  }
+  return a1.concat(a2);
+}
+
+function print(e){
+  document.write(JSON.stringify(e) + '<br>')
+}
+
+print(binStrings(0));
+print(binStrings(1));
+print(binStrings(2));
+print(binStrings(3));
